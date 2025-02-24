@@ -1,0 +1,389 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class mainGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TicTac tictac = new TicTac();
+	}
+
+}
+
+class TicTac extends JFrame implements ActionListener{
+	JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,clear;
+	JLabel l1,l2,l3,message;
+	
+	int counter = 0, mod = 0, winX = 0, winO = 0;
+	String x = "", o = "";
+	char win = 'n';
+	
+	public TicTac() {
+		super("Tic-Tac-Toe");
+		
+		JPanel panel = new JPanel();
+		JFrame frame = new JFrame("Grid");
+		
+		l1 = new JLabel("");
+		l2 = new JLabel("");
+		l3 = new JLabel("");
+		message = new JLabel("           ");
+		b1 = new JButton("-");
+		b2 = new JButton("-");
+		b3 = new JButton("-");
+		b4 = new JButton("-");
+		b5 = new JButton("-");
+		b6 = new JButton("-");
+		b7 = new JButton("-");
+		b8 = new JButton("-");
+		b9 = new JButton("-");
+		clear = new JButton("Clear");
+		
+		panel.setLayout(new GridLayout(5,3,3,3));
+		
+		panel.add(b1);
+		panel.add(b2);
+		panel.add(b3);
+		panel.add(b4);
+		panel.add(b5);
+		panel.add(b6);
+		panel.add(b7);
+		panel.add(b8);
+		panel.add(b9);
+		panel.add(l1);
+		panel.add(clear);
+		panel.add(l2);
+		panel.add(l3);
+		panel.add(message);
+		
+		frame.add(panel);
+		
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		b3.addActionListener(this);
+		b4.addActionListener(this);
+		b5.addActionListener(this);
+		b6.addActionListener(this);
+		b7.addActionListener(this);
+		b8.addActionListener(this);
+		b9.addActionListener(this);
+		clear.addActionListener(this);
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.pack();
+		frame.setVisible(true);
+		frame.setSize(100,150);
+	}
+	
+	public void actionPerformed(ActionEvent ae) {
+		if(ae.getSource() == b1){
+			counter++;
+			mod = counter % 2;
+			
+			if(mod != 0){	
+				b1.setText("O");
+				b1.setEnabled(false);
+				o += "a";
+				message.setText("X your turn!");
+			}else{
+				b1.setText("X");
+				b1.setEnabled(false);
+				x += "a";
+				message.setText("O your turn!");
+			}
+		}
+		if(ae.getSource() == b2){
+			counter++;
+			mod = counter % 2;
+			
+			if(mod != 0){	
+				b2.setText("O");
+				b2.setEnabled(false);
+				o += "a";
+				message.setText("X your turn!");
+			}else{
+				b2.setText("X");
+				b2.setEnabled(false);
+				x += "a";
+				message.setText("O your turn!");
+			}
+		}
+		if(ae.getSource() == b3){
+			counter++;
+			mod = counter % 2;
+			
+			if(mod != 0){	
+				b3.setText("O");
+				b3.setEnabled(false);
+				o += "a";
+				message.setText("X your turn!");
+			}else{
+				b3.setText("X");
+				b3.setEnabled(false);
+				x += "a";
+				message.setText("O your turn!");
+			}
+		}
+		if(ae.getSource() == b4){
+			counter++;
+			mod = counter % 2;
+			
+			if(mod != 0){	
+				b4.setText("O");
+				b4.setEnabled(false);
+				o += "a";
+				message.setText("X your turn!");
+			}else{
+				b4.setText("X");
+				b4.setEnabled(false);
+				x += "a";
+				message.setText("O your turn!");
+			}
+		}
+		if(ae.getSource() == b5){
+			counter++;
+			mod = counter % 2;
+			
+			if(mod != 0){	
+				b5.setText("O");
+				b5.setEnabled(false);
+				o += "a";
+				message.setText("X your turn!");
+			}else{
+				b5.setText("X");
+				b5.setEnabled(false);
+				x += "a";
+				message.setText("O your turn!");
+			}
+		}
+		if(ae.getSource() == b6){
+			counter++;
+			mod = counter % 2;
+			
+			if(mod != 0){	
+				b6.setText("O");
+				b6.setEnabled(false);
+				o += "a";
+				message.setText("X your turn!");
+			}else{
+				b6.setText("X");
+				b6.setEnabled(false);
+				x += "a";
+				message.setText("O your turn!");
+			}
+		}
+		if(ae.getSource() == b7){
+			counter++;
+			mod = counter % 2;
+			
+			if(mod != 0){	
+				b7.setText("O");
+				b7.setEnabled(false);
+				o += "a";
+				message.setText("X your turn!");
+			}else{
+				b7.setText("X");
+				b7.setEnabled(false);
+				x += "a";
+				message.setText("O your turn!");
+			}
+		}
+		
+		if(ae.getSource() == b8){
+			counter++;
+			mod = counter % 2;
+			
+			if(mod != 0){	
+				b8.setText("O");
+				b8.setEnabled(false);
+				o += "a";
+				message.setText("X your turn!");
+			}else{
+				b8.setText("X");
+				b8.setEnabled(false);
+				x += "a";
+				message.setText("O your turn!");
+			}
+		}
+		if(ae.getSource() == b9){
+			counter++;
+			mod = counter % 2;
+			
+			if(mod != 0){	
+				b9.setText("O");
+				b9.setEnabled(false);
+				o += "a";
+				message.setText("X your turn!");
+			}else{
+				b9.setText("X");
+				b9.setEnabled(false);
+				x += "a";
+				message.setText("O your turn!");
+			}
+		}
+		if(ae.getSource() == clear){
+			
+			counter = 0;
+			
+			b1.setText("-");
+			b2.setText("-");
+			b3.setText("-");
+			b4.setText("-");
+			b5.setText("-");
+			b6.setText("-");
+			b7.setText("-");
+			b8.setText("-");
+			b9.setText("-");
+			
+			b1.setEnabled(true);
+			b2.setEnabled(true);
+			b3.setEnabled(true);
+			b4.setEnabled(true);
+			b5.setEnabled(true);
+			b6.setEnabled(true);
+			b7.setEnabled(true);
+			b8.setEnabled(true);
+			b9.setEnabled(true);
+			
+			message.setText("");
+		}
+		
+		String bb1 = b1.getText();
+		String bb2 = b2.getText();
+		String bb3 = b3.getText();
+		String bb4 = b4.getText();
+		String bb5 = b5.getText();
+		String bb6 = b6.getText();
+		String bb7 = b7.getText();
+		String bb8 = b8.getText();
+		String bb9 = b9.getText();
+		
+			if(bb1.equals("O") && bb2.equals("O") && bb3.equals("O"))
+			{
+				winO++;
+				JOptionPane.showMessageDialog(null, " O wins!");
+				bb1 = "";
+				win ='o';
+				counter = 0;
+				
+			}
+			if(bb1.equals("X") && bb2.equals("X") && bb3.equals("X"))
+			{
+				winX++;
+				JOptionPane.showMessageDialog(null, " X wins!");
+				bb1 = "";
+				win ='x';
+				counter = 0;
+			}
+
+			if(bb1.equals("O") && bb4.equals("O") && bb7.equals("O"))
+			{
+				winO++;
+				JOptionPane.showMessageDialog(null, " O wins!");
+				bb1 = "";
+				win ='o';
+				counter = 0;
+			}
+			if(bb1.equals("X") && bb4.equals("X") && bb7.equals("X"))
+			{
+				winX++;
+				JOptionPane.showMessageDialog(null, " X wins!");
+				bb1 = "";
+				win ='x';
+				counter = 0;
+			}
+		
+			if(bb1.equals("O") && bb5.equals("O") && bb9.equals("O"))
+			{
+				winO++;
+				JOptionPane.showMessageDialog(null, " O wins!");
+				bb1 = "";
+				win ='o';
+				counter = 0;
+				
+			}
+			if(bb1.equals("X") && bb5.equals("X") && bb9.equals("X"))
+			{
+				winX++;
+				JOptionPane.showMessageDialog(null, " X wins!");
+				bb1 = "";
+				win ='x';
+				counter = 0;
+			}
+			
+			if(bb2.equals("O") && bb5.equals("O") && bb8.equals("O"))
+			{
+				winO++;
+				JOptionPane.showMessageDialog(null, " O wins!");
+				bb1 = "";
+				win ='o';
+				counter = 0;
+			}
+			if(bb2.equals("X") && bb5.equals("X") && bb8.equals("X"))
+			{
+				winX++;
+				JOptionPane.showMessageDialog(null, " X wins!");
+				bb1 = "";
+				win ='x';
+				counter = 0;
+			}
+
+			if(bb3.equals("O") && bb6.equals("O") && bb9.equals("O"))
+			{
+				winO++;
+				JOptionPane.showMessageDialog(null, " O wins!");
+				bb1 = "";
+				win ='o';
+				counter = 0;
+			}
+			if(bb3.equals("X") && bb6.equals("X") && bb9.equals("X"))
+			{
+				winX++;
+				JOptionPane.showMessageDialog(null, " X wins!");
+				bb1 = "";
+				win ='x';
+				counter = 0;
+			}
+
+			if(bb3.equals("O") && bb5.equals("O") && bb7.equals("O"))
+			{
+				winO++;
+				JOptionPane.showMessageDialog(null, " O wins!");
+				bb1 = "";
+				win ='o';
+				counter = 0;
+				
+			}
+			if(bb3.equals("X") && bb5.equals("X") && bb7.equals("X"))
+			{
+				winX++;
+				JOptionPane.showMessageDialog(null, " X wins!");
+				bb1 = "";
+				win ='x';
+				counter = 0;
+			}
+
+			if(bb4.equals("O") && bb5.equals("O") && bb6.equals("O"))
+			{
+				winO++;
+				JOptionPane.showMessageDialog(null, " O wins!");
+				bb1 = "";
+				win ='o';
+				counter = 0;
+			}
+			if(bb4.equals("X") && bb5.equals("X") && bb6.equals("X"))
+			{
+				winX++;
+				JOptionPane.showMessageDialog(null, " X wins!");
+				bb1 = "";
+				win ='x';
+				counter = 0;
+			}
+			
+			if(counter == 9 ) {
+				JOptionPane.showMessageDialog(null, " Draw");
+				counter =0;
+			}
+	}
+}
